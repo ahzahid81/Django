@@ -12,7 +12,7 @@ def my_template(value, arg):
         return value.title()
     
 def show_courses():
-    courses : {
+    courses = [
         {
             "id" : 1,
             "couses" : "C",
@@ -25,10 +25,11 @@ def show_courses():
         },
         {
             "id" : 3,
-            "courses" : "python",
+            "couses" : "python",
             "teacher" : "Fahim"
-        }}
-    return {'courses'}
+        },
+        ]
+    return {'courses' : courses}
 
 courses_template  = get_template('first_app/courses.html')   
 register.filter('change_name', my_template )
